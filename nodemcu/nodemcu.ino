@@ -60,5 +60,5 @@ void loop() {
     Serial.println("Connection to server failed");
   }
 
-  delay(60000);
+  delay(5000);
 }
