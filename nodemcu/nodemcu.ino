@@ -47,13 +47,6 @@ void loop() {
                  "Host: " + serverName + "\r\n" +
                  "Connection: close\r\n\r\n");
 
-    while (client.connected() || client.available()) {
-      if (client.available()) {
-        String response = client.readStringUntil('\n');
-        Serial.println(response);
-      }
-    }
-
     client.stop();
     Serial.println("Disconnected from server");
   } else {
