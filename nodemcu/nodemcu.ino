@@ -29,7 +29,7 @@ void setup() {
 }
 
 void loop() {
-  int mqValue = analogRead(mqSensorPin);
+  int mqValue = analogRead(mqSensorPin) * (10000.0/1024.0);
   bool motionDetected = digitalRead(motionSensorPin) == HIGH;
 
   Serial.print("MQ Value: ");
